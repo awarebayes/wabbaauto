@@ -1,0 +1,23 @@
+[package]
+name = "lib-wabbaauto"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0.92"
+async-trait = "0.1.83"
+base64 = "0.22.1"
+fastrand = "2.1.1"
+futures-lite = "2.4.0"
+headless_chrome = "1.0.15"
+log = "0.4.22"
+once_cell = "1.20.2"
+reqwest = { version = "0.12.9", features = ["json", "stream"] }
+ringbuffer = "0.15.0"
+serde = { version = "1.0.214", features = ["derive"] }
+serde_json = "1.0.132"
+thiserror = "2.0.1"
+tokio = { version = "1.41.0", features = ["full"] }
+twox-hash = "2.0.1"
+use = "0.0.1-pre.0"
+xxhash-rust = { version = "0.8.12", features = ["const_xxh64", "xxh3", "xxh32", "xxh64"] }

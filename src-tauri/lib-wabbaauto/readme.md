@@ -1,0 +1,1 @@
+This is a separate crate to lower build time for testing and maybe use as a cli later on
