@@ -35,17 +35,30 @@ pub async fn connect_to_browser() -> Result<Browser, WabbaAutoError> {
 
 pub async fn nexus_login() -> Result<bool, WabbaAutoError> {
     let browser = connect_to_browser().await?;
-    let tab = browser
-        .new_tab()
-        .map_err(|_| WabbaAutoError::HeadlessChromeError)?;
 
-    tab.navigate_to("http://nexusmods.com")
-        .map_err(|_| WabbaAutoError::HeadlessChromeError)?;
+    let tab = browser
+        .new_tab_with_options(CreateTarget {
+            url: "http://nexusmods.com".to_owned(),
+            background: Some(false),
+            width: Some(1920),
+            height: Some(1080),
+            browser_context_id: None,
+            enable_begin_frame_control: None,
+            new_window: None,
+        })
+        .expect("Could not open a new tab after connecting to chrome");
+
+    let jpeg_data = tab.capture_screenshot(
+        Page::CaptureScreenshotFormatOption::Jpeg,
+        None,
+        None,
+        true).unwrap();
+    std::fs::write("screenshot.jpeg", jpeg_data).unwrap();
     tab.wait_for_element("header#head")
         .map_err(|_| WabbaAutoError::HeadlessChromeError)?;
 
-    let is_logged_in = tab.find_element("a#login").is_err();
-    Ok(is_logged_in)
+    let is_logged_in = tab.find_element("a#login").is_ok();
+    Ok(!is_logged_in)
 }
 
 pub async fn get_nexus_download_url(

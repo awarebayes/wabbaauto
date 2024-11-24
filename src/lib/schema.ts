@@ -7,8 +7,8 @@ export const ModlistSchema = z.object({
 export type Modlist = z.infer<typeof ModlistSchema>;
 
 export const LoginStatusSchema = z.object({
-  loverslab: z.boolean(),
-  nexusmods: z.boolean(),
+  chrome: z.boolean(),
+  website: z.boolean(),
   error: z.string(),
 });
 

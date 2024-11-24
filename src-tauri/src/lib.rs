@@ -1,10 +1,10 @@
 mod schema;
 use chrono::Local;
 use lib_wabbaauto::{
-    check_nexus_login, download_modlist_status, test_downloader, AppState, DownloadManager,
+    check_nexus_login as ch_nexus_login, download_modlist_status, test_downloader, AppState, DownloadManager,
 };
 use schema::DownloadReponse;
-use tauri::{async_runtime::Mutex, Emitter, Manager, State};
+use tauri::{async_runtime::Mutex, Emitter, State};
 use tokio::sync::watch;
 
 #[derive(Debug, Default)]
@@ -13,8 +13,8 @@ struct AppData {
 }
 
 #[tauri::command]
-async fn do_check_nexus_login() -> String {
-    let login_status = check_nexus_login().await;
+async fn check_nexus_login() -> String {
+    let login_status = ch_nexus_login().await;
     let ret_status = serde_json::to_string(&login_status).unwrap();
     return ret_status;
 }
@@ -109,8 +109,7 @@ pub fn run() {
         .plugin(tauri_plugin_websocket::init())
         .plugin(tauri_plugin_http::init())
         .plugin(tauri_plugin_shell::init())
-        .invoke_handler(tauri::generate_handler![do_check_nexus_login])
-        .invoke_handler(tauri::generate_handler![run_download_thread])
+        .invoke_handler(tauri::generate_handler![run_download_thread, check_nexus_login])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }
