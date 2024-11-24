@@ -43,8 +43,7 @@ export async function checkBrowser() {
   let loginStatus = result.data;
   console.log(loginStatus);
   chromeRunning.set(true);
-  nexusLoggedIn.set(loginStatus.nexusmods);
-  loversLoggedIn.set(loginStatus.loverslab);
+  nexusLoggedIn.set(loginStatus.website);
   errorMsg.set(loginStatus.error);
 }
 
