@@ -7,6 +7,7 @@ Automate your Nexus mod downloads using a botted Google Chrome instance. Support
 
 ## ✨ Features
 
+- 🌐 Cross Platform (Windows, Linux, MacOS)
 - 🤖 Automated mod downloads from NexusMods (LL, others planned)
 - 🎯 Support for wabbajack modlists
 - 📦 Works on top of portable chrome
@@ -18,6 +19,8 @@ Automate your Nexus mod downloads using a botted Google Chrome instance. Support
 ![Downloading](https://private-user-images.githubusercontent.com/42784580/389278968-8e5e9729-bb5d-46a4-9a3c-4adac2cbc3e6.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzI0NTk2NzAsIm5iZiI6MTczMjQ1OTM3MCwicGF0aCI6Ii80Mjc4NDU4MC8zODkyNzg5NjgtOGU1ZTk3MjktYmI1ZC00NmE0LTlhM2MtNGFkYWMyY2JjM2U2LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDExMjQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQxMTI0VDE0NDI1MFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTc5Yjc1ZjliMDZkZmM2OWFlOGFjNTg5NjA5ZGUyZDVjZWQ5NzAxNGJmOTY1ZDQwM2JjYWVkZDViODU2YjcyNjUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.cqNNvzOBATpX-mYVCY-sM3H9WaiaIi7sjqU8a92lvBU)
 
 ## 🚀 Quick Start Guide
+
+To gram the executable, go get the [latest release](https://github.com/awarebayes/wabbaauto/releases) for your platform.
 
 ### 1. Set Up Chrome Portable
 
