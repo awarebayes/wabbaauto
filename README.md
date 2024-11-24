@@ -20,7 +20,7 @@ Automate your Nexus mod downloads using a botted Google Chrome instance. Support
 
 ## 🚀 Quick Start Guide
 
-To gram the executable, go get the [latest release](https://github.com/awarebayes/wabbaauto/releases) for your platform.
+To grab the executable, go get the [latest release](https://github.com/awarebayes/wabbaauto/releases) for your platform.
 
 ### 1. Set Up Chrome Portable
 
