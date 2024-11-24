@@ -12,7 +12,9 @@ Automate your Nexus mod downloads using a botted Google Chrome instance. Support
 - 📦 Works on top of portable chrome
 - 👻 Optional headless mode operation
 - 📦 Single self contained binary
-- 🖥️ Optional TUI w [RataTui]()
+- 🖥️ Optional [TUI](https://github.com/awarebayes/wabbaauto/tree/release/src-tauri/cli) w [RataTui](https://ratatui.rs/)
+
+
 
 ## 🚀 Quick Start Guide
 
