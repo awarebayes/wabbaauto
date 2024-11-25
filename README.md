@@ -3,7 +3,9 @@
 [![Chrome Automation](https://img.shields.io/badge/Chrome-Automation-blue)](https://www.chromium.org/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
-Automate your Nexus mod downloads using a botted Google Chrome instance. Supports both interactive and headless operation modes.
+Automate your Nexus mod downloads using a botted Google Chrome instance.
+
+The development of this tool stops, when the Nexus Mods team adds crypto payment option, so that everyone is able to pay for the mods.
 
 ## ✨ Features
 
