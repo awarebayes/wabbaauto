@@ -1,22 +1,16 @@
-import { modlists } from "./stores";
 import { z } from "zod";
 import {
   LoginStatusSchema,
   ModlistLongSchema,
   ModlistSchema,
+  type Modlist,
   type ModlistLong,
 } from "./schema";
 import { fetch } from "@tauri-apps/plugin-http";
 import { invoke } from "@tauri-apps/api/core";
-import {
-  chromeRunning,
-  nexusLoggedIn,
-  loversLoggedIn,
-  errorMsg,
-} from "./stores";
+import { chromeRunning, nexusLoggedIn, errorMsg } from "./stores";
 
-export async function getModlists() {
-  modlists.set([]);
+export async function getModlists(): Promise<Modlist[]> {
   let modlistsReq = await fetch(
     "https://raw.githubusercontent.com/wabbajack-tools/mod-lists/refs/heads/master/reports/modListSummary.json",
   );
@@ -25,11 +19,11 @@ export async function getModlists() {
   if (!result.success) {
     errorMsg.set(
       "Zod schema error (possible GitHub api change by Wabbajack): " +
-      result.error.toString(),
+        result.error.toString(),
     );
-    return;
+    return [];
   }
-  modlists.set(result.data);
+  return result.data;
 }
 
 export async function checkBrowser() {
